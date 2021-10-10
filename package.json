@@ -1,0 +1,33 @@
+{
+  "name": "personaje-microservice",
+  "version": "1.0.0",
+  "description": "Microservicio de Personaje",
+  "main": "main.js",
+  "scripts": {
+    "start": "nodemon main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/retornoaragond/P1-SD-Personaje-Microservicio.git"
+  },
+  "keywords": [
+    "nodejs",
+    "microservices"
+  ],
+  "author": "Esteban Espinoza Fallas & Marco Murillo Sanchez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/retornoaragond/P1-SD-Personaje-Microservicio/issues"
+  },
+  "homepage": "https://github.com/retornoaragond/P1-SD-Personaje-Microservicio#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "express": "^4.17.1",
+    "nodemon": "1.18.4"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}
