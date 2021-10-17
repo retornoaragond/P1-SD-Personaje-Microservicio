@@ -41,15 +41,15 @@ app.get('/personaje/:id', (req, res) => {
 })
 
 app.post('/personaje', (req, res) => {
-    let index = personajes.findIndex(i => i.id == req.params.id);
+    let index = personajes.findIndex(i => i.id == req.body.id);
     if (index != -1)
-      res.status(404).send('Personaje already exits'); 
+        res.status(404).send('Personaje already exits');
     else {
-      personajes.push(req.body);
-      savePersonajes();
+        personajes.push(req.body);
+        savePersonajes();
     }
     res.status(200).send('Personaje added');
-  })
+})
 
 app.put('/personaje/:id', (req, res) => {
     let index = personajes.findIndex(i => i.id == req.params.id);
@@ -62,7 +62,7 @@ app.put('/personaje/:id', (req, res) => {
     res.status(200).send('Personaje updated');
 })
 
-app.delete('/personaje/:id', (req, res) => {
+app.post('/personaje/delete/:id', (req, res) => {
     let index = personajes.findIndex(i => i.id == req.params.id);
     if (index == -1)
         res.status(404).send('Personaje not found');
@@ -73,6 +73,6 @@ app.delete('/personaje/:id', (req, res) => {
     res.status(200).send('Personaje deleted');
 })
 
-app.listen(port, () => 
-  console.log(`Personajes Server listening on port ${port}`)
+app.listen(port, () =>
+    console.log(`Personajes Server listening on port ${port}`)
 )
